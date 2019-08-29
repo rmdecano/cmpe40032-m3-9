@@ -1,0 +1,26 @@
+Grow and Shrink Update
+1. Added functions on Paddle.lua
+2. Added callings on PlayState when a player lost a life and got a certain score
+
+Multiple Balls Update
+1. Compose a powerup class framing ball or paddle.
+2. Add a quad function for powerups on Util.lua
+3. Declare it on main.lua 
+4. Modify logics that includes self.ball on PlayState.lua, because you now have a table of balls.
+
+Locked Bricks Update
+1. Generate a quad for the locked brick in Util.lua
+2. Declare it on main.lua
+3. Add a brick randomizer to lock or not on brick.lua init (utilize math.random)
+4. Add a logic on brick.lua hit() and render() if it's locked or not (boolean, etc.)
+5. Add the skin of key powerups on the class by putting logic and using parameters' logic on playstate.lua
+6. Optional on where to put, but I've put this on Util.lua: Add functions to be called on playstate.lua; spawning powerup and lockedBricked logic.
+7. On PlayState.lua:
+	-initiate table for the powerups and keys and timer to randomize the spawning
+	-Add logics on when to spawn powerups on update.
+	-Modify the collision logics by adding for loops since it's now a table
+8. Optional: Render a key icon whenever you obtained the key powerup. I've imported a png named key.png,and it will appear near the hearts by making a function on main.lua framing like the renderHearts function. 
+
+
+
+
